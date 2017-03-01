@@ -20,14 +20,6 @@ class game:
 
 	def __init__(self, save_data):
 		self.inventory = save_data.inventory
-
-	def main(self):
-		print('무인도에서 살아남기')
-		print('------------------')
-		print('당신은 이 무인도에서 생존하게 될것이다.')
-		print()
-		inv_print()
-	
 	def inv_print(self):
 		print(
 			' '.join(
@@ -35,3 +27,10 @@ class game:
 				, ', '.join([ looper.data['name'] 
 					for looper in self.inventory ])
 				, '입니다.' ]))
+
+	def main(self):
+		print('무인도에서 살아남기')
+		print('------------------')
+		print('당신은 이 무인도에서 생존하게 될것이다.')
+		print()
+		self.inv_print()

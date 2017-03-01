@@ -1,3 +1,12 @@
+def sword_use(self):
+	pass
+
+def bag_use(self):
+	pass
+
+def rope_use(self):
+	pass
+
 sword = {
 	 'num' : 0
 	,'name' : '칼'
@@ -12,12 +21,3 @@ rope = {
 	 'num' : 2
 	,'name' : '줄'
 	,'use' : rope_use}
-
-def sword_use(self):
-	pass
-
-def bag_use(self):
-	pass
-
-def rope_use(self):
-	pass
