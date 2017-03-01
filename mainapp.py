@@ -32,6 +32,6 @@ class game:
 		print(
 			' '.join(
 				[ '있는 것은'
-				, ', '.join([ looper.data[‘name’] 
+				, ', '.join([ looper.data['name'] 
 					for looper in self.inventory ])
 				, '입니다.' ]))
