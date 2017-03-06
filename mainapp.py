@@ -3,13 +3,13 @@ import g_data
 
 
 class item:
-
+	#
 	def __init__(self, item_type):
 		self.data = item_type
 		self.use = self.data['use']
 
 class data:
-
+	#
 	def __init__(self, inventory = 
 		[ item(g_data.sword)
 		, item(g_data.bag)
@@ -17,7 +17,7 @@ class data:
 		self.inventory = inventory
 
 class game:
-
+	#
 	def __init__(self, save_data):
 		self.inventory = save_data.inventory
 	def inv_print(self):
@@ -27,7 +27,7 @@ class game:
 				, ', '.join([ looper.data['name'] 
 					for looper in self.inventory ])
 				, '입니다.' ]))
-
+	#
 	def main(self):
 		print('무인도에서 살아남기')
 		print('------------------')
