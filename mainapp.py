@@ -20,6 +20,7 @@ class game:
 	#
 	def __init__(self, save_data):
 		self.inventory = save_data.inventory
+	#
 	def inv_print(self):
 		print(
 			' '.join(
@@ -34,3 +35,16 @@ class game:
 		print('당신은 이 무인도에서 생존하게 될것이다.')
 		print()
 		self.inv_print()
+	#
+	def user_play(self):
+		user_input = input('어떤 것을 쓰시겠습니까? : ')
+		if user_input:
+			for looper in self.inventory:
+				if looper.data['name'] == user_input:
+					looper.data['use']()
+					del looper
+
+now_game = game(data())
+now_game.main()
+while True:
+	now_game.user_play()
